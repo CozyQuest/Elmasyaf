@@ -1,0 +1,6 @@
+@Elamsyaf.WebAPI_HostAddress = http://localhost:5268
+
+GET {{Elamsyaf.WebAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
