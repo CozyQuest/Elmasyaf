@@ -12,7 +12,14 @@ namespace Elmasyaf.Infrastructure.Data
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-        public DbSet<Apartment> Apartments { get; set; }
+        public DbSet<Property> Properties { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Renting> Rentings { get; set; }
+        public DbSet<Review> Reviews { get; set; }
+        public DbSet<Image> Images { get; set; }
+        public DbSet<Service> Services { get; set; }
+        public DbSet<PropertyType> PropertyTypes { get; set; }
+        public DbSet<Admin> Admins { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

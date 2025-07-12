@@ -39,6 +39,7 @@ namespace Elmasyaf.API
 
             // Application Services
             builder.Services.AddScoped<IApartmentService, ApartmentService>();
+            builder.Services.AddScoped<IUserService, UserService>();
 
             var app = builder.Build();
 

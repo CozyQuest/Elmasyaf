@@ -9,7 +9,8 @@ namespace Elmasyaf.Domain.Interfaces
 {
     public interface IUnitOfWork : IDisposable
     {
-        IBaseRepository<Apartment> Apartments { get; }
+        IBaseRepository<Property> Properties { get; }
+        IBaseRepository<User> Users { get; }
         Task<int> SaveChangesAsync();
     }
 }

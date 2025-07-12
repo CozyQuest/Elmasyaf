@@ -13,11 +13,13 @@ namespace Elmasyaf.Infrastructure.Data
     public class UnitOfWork : IUnitOfWork
     {
         private readonly AppDbContext _context;
-        public IBaseRepository<Apartment> Apartments { get; private set; }
-        public UnitOfWork(AppDbContext context, IBaseRepository<Apartment> baseRepository)
+        public IBaseRepository<Property> Properties { get; private set; }
+        public IBaseRepository<User> Users { get; private set; }
+        public UnitOfWork(AppDbContext context, IBaseRepository<Property> baseRepository, IBaseRepository<User> users)
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
-            Apartments = baseRepository ?? throw new ArgumentNullException(nameof(baseRepository));
+            Properties = baseRepository ?? throw new ArgumentNullException(nameof(baseRepository));
+            Users = users;
         }
         public async Task<int> SaveChangesAsync()
         {

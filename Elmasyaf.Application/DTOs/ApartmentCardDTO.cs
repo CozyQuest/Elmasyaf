@@ -21,5 +21,7 @@ namespace Elmasyaf.Application.DTOs
         public double Latitude { get; set; }
         [Range(20, 40)]
         public decimal Price { get; set; }
+        public long UserId { get; set; }
+        public UserDTO User { get; set; }
     }
 }

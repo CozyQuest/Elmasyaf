@@ -8,7 +8,8 @@ namespace Elmasyaf.API.Mapping
     {
         public MappingProfile()
         {
-            CreateMap<Apartment, ApartmentCardDTO>().ReverseMap();
+            CreateMap<User, UserDTO>().ReverseMap();
+            CreateMap<Property, ApartmentCardDTO>().ReverseMap();
         }
     }
 }
